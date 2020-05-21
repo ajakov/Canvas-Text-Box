@@ -1,0 +1,14 @@
+.container {
+    margin: 30px auto;
+    width: 970px;
+}
+
+section.example {
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 30px 0;
+}
+
+canvas.example-canvas {
+    border: 1px solid red;
+}
