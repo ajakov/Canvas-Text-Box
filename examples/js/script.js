@@ -60,4 +60,54 @@ docReady(function() {
         fullWidthBackground: true
     };
     canvasTextBox.draw(canvas4, text, options4);
+
+    let canvas5 = document.getElementById("example5-canvas");
+    let options5 = {
+        textFillStyle: '#000000',
+        fontSize: 22,
+        lineHeight: 26,
+        width: 350,
+        startX: 26,
+        startY: 26,
+        bottomAligned: true,
+        useBackground: true,
+        fullWidthBackground: true,
+        textAlign: 'center'
+    };
+    canvasTextBox.draw(canvas5, text, options5);
+
+    let canvas6 = document.getElementById("example6-canvas");
+    let options6 = {
+        textFillStyle: '#000000',
+        fontSize: 22,
+        lineHeight: 26,
+        width: 350,
+        startX: 26,
+        startY: 26,
+        bottomAligned: true,
+        useBackground: true,
+        fullWidthBackground: false,
+        textAlign: 'center'
+    };
+    canvasTextBox.draw(canvas6, text, options6);
+
+    let canvas7 = document.getElementById("example7-canvas");
+    let options7 = {
+        fontFamily: 'Impact, Charcoal, sans-serif',
+        textFillStyle: '#FFFF00',
+        fontSize: 40,
+        fontWeight: 'bold',
+        lineHeight: 52,
+        width: 400,
+        startX: 0,
+        startY: 52,
+        bottomAligned: false,
+        useBackground: false,
+        textAlign: 'center'
+    };
+    let options71 = Object.assign({}, options7);
+    options71.bottomAligned = true;
+    options71.marginBottom = 20;
+    canvasTextBox.draw(canvas7, 'Y U NOT USE THIS', options7);
+    canvasTextBox.draw(canvas7, 'FOR MEME GENERATOR', options71);
 });

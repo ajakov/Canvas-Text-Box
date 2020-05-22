@@ -38,6 +38,7 @@ As stated, it is a DOMString parsed as CSS [font](https://developer.mozilla.org/
 * `fontSize: 32`,  [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) in pixels
 * `lineHeight: 40`,  [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) in pixels
 * `textFillStyle: '#000000'` color of the text fill 
+* `textAlign: 'left'` alignment of the text within the text box. Accepted values: `left`, `center`
 
 ### Background related options
 

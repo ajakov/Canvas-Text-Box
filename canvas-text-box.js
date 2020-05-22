@@ -7,6 +7,7 @@ const canvasTextBox = (function () {
         fontWeight: 'normal',
         fontSize: 32,
         lineHeight: 40,
+        textAlign: 'left',
         startX: 20,
         startY: 20,
         marginTop: 0,
@@ -26,7 +27,7 @@ const canvasTextBox = (function () {
 
     function checkOptions(options) {
         for (let [key, value] of Object.entries(defaultOptions)) {
-            if (typeof (options[key]) == 'undefined' || !(options[key])) {
+            if (typeof (options[key]) == 'undefined') {
                 options[key] = value;
             }
         }
@@ -89,12 +90,20 @@ const canvasTextBox = (function () {
         for (let i = 0; i < lines.length; i++) {
 
             if(options.useBackground && !options.fullWidthBackground) {
+                let lineBgStartX = startX;
+                if(options.textAlign == 'center') {
+                    lineBgStartX = lineBgStartX + (options.width - lineMeasures[i].width) / 2;
+                }
                 context.fillStyle = options.backgroundFillStyle;
-                context.fillRect(startX - options.paddingLeft, startY - options.paddingTop, lineMeasures[i].width + options.paddingRight, lineHeight);
+                context.fillRect(lineBgStartX - options.paddingLeft, startY - options.paddingTop, lineMeasures[i].width + options.paddingRight, lineHeight);
             }
 
             context.fillStyle = options.textFillStyle;
-            context.fillText(lines[i], startX, startY);
+            let lineStartX = startX;
+            if(options.textAlign == 'center') {
+                lineStartX = startX + (options.width - lineMeasures[i].width) / 2;
+            }
+            context.fillText(lines[i], lineStartX, startY);
 
             startY += lineHeight;
         }
