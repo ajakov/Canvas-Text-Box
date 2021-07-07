@@ -3,6 +3,21 @@
     width: 970px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
 section.example {
     border-bottom: 1px solid gray;
     border-top: 1px solid gray;
@@ -11,4 +26,9 @@ section.example {
 
 canvas.example-canvas {
     border: 1px solid red;
+}
+
+.column pre {
+    width: 100%;
+    overflow-x: auto;
 }

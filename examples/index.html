@@ -3,17 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Canvas Text Box Examples</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
     <script src="../canvas-text-box.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((el) => {
+                hljs.highlightElement(el);
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
+        <h1>Canvas Text Box Examples</h1>
         <section class="example">
-            <canvas id="example1-canvas" class="example-canvas" width="400" height="400"></canvas>
+            <h2>Example 1 - Simple</h2>
+            <div class="row">
+                <div class="column">
+                    <canvas id="example1-canvas" class="example-canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>Simple 350px wide text box in a 400px wide canvas.</p>
+<pre><code class="language-javascript">
+let text = 'Lorem ipsum dolor sit amet, ...';
+
+let canvas1 = document.getElementById("example1-canvas");
+let options1 = {
+    textFillStyle: '#000000',
+    fontSize: 22,
+    lineHeight: 26,
+    width: 350,
+    startX: 26,
+    startY: 26
+};
+canvasTextBox.draw(canvas1, text, options1);
+</code></pre>
+
+                    </div>
+                </div>
+
+
+            </div>
+
         </section>
         <section class="example">
+            <h2>Example 2 - Bottom aligned</h2>
+            <div class="row">
+                <div class="column">
             <canvas id="example2-canvas" class="example-canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>Same as in example 1 - only bottom aligned. </p>
+                        <p>
+                            In this example, the text box is aligned to the bottom of the canvas, and <b>startX</b> and
+                            <b>startY</b> properties actually refer to the bottom left point of the text box:
+                            <ul>
+                                <li><b>startX</b> being the distance from the left side of the canvas</li>
+                                <li><b>startY</b> being the distance from the bottom side of the canvas</li>
+                            </ul>
+                        </p>
+                        <pre><code class="language-javascript">
+let text = 'Lorem ipsum dolor sit amet, ...';
+
+let canvas2 = document.getElementById("example2-canvas");
+let options2 = {
+    textFillStyle: '#000000',
+    fontSize: 22,
+    lineHeight: 26,
+    width: 350,
+    startX: 26,
+    startY: 26,
+    bottomAligned: true
+};
+canvasTextBox.draw(canvas2, text, options2);
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="example">
             <canvas id="example3-canvas" class="example-canvas" width="400" height="400"></canvas>
