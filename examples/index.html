@@ -66,11 +66,12 @@ canvasTextBox.draw(canvas1, text, options1);
                         <p>
                             In this example, the text box is aligned to the bottom of the canvas, and <b>startX</b> and
                             <b>startY</b> properties actually refer to the bottom left point of the text box:
-                            <ul>
-                                <li><b>startX</b> being the distance from the left side of the canvas</li>
-                                <li><b>startY</b> being the distance from the bottom side of the canvas</li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li><b>startX</b> being the distance from the left side of the canvas</li>
+                            <li><b>startY</b> being the distance from the bottom side of the canvas</li>
+                        </ul>
+
                         <pre><code class="language-javascript">
 let text = 'Lorem ipsum dolor sit amet, ...';
 
@@ -128,7 +129,38 @@ let options3 = {
             </div>
         </section>
         <section class="example">
-            <canvas id="example4-canvas" class="example-canvas" width="400" height="400"></canvas>
+            <h2>Example 4 - Background under entire text box</h2>
+            <div class="row">
+                <div class="column">
+                    <canvas id="example4-canvas" class="example-canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>Same as in example 3 - only background cover entire text box. </p>
+                        <p>
+                            In addition to options introduced in the previous example, <b>fullWidthBackground</b> option
+                            is added and set to <b>true</b>.
+                        </p>
+                        <pre><code class="language-javascript">
+let text = 'Lorem ipsum dolor sit amet, ...';
+
+let canvas4 = document.getElementById("example4-canvas");
+let options4 = {
+    textFillStyle: '#000000',
+    fontSize: 22,
+    lineHeight: 26,
+    width: 350,
+    startX: 26,
+    startY: 26,
+    bottomAligned: true,
+    useBackground: true,
+    fullWidthBackground: true
+};
+canvasTextBox.draw(canvas4, text, options4);
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="example">
             <canvas id="example5-canvas" class="example-canvas" width="400" height="400"></canvas>
