@@ -91,7 +91,41 @@ canvasTextBox.draw(canvas2, text, options2);
             </div>
         </section>
         <section class="example">
-            <canvas id="example3-canvas" class="example-canvas" width="400" height="400"></canvas>
+            <h2>Example 3 - Background under text</h2>
+            <div class="row">
+                <div class="column">
+                    <canvas id="example3-canvas" class="example-canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>Same as in example 2 - only added background. </p>
+                        <p>
+                            In addition to options introduced in the previous example, <b>useBackground</b> option
+                            is added and set to <b>true</b>. It uses default background color, if not defined otherwise
+                            using <b>backgroundFillStyle</b> option.
+                        </p>
+                        <p>
+                            <b>Note:</b> In this case background is visible only under the text itself, it does not take
+                            the entire area of the text box.
+                        </p>
+                        <pre><code class="language-javascript">
+let text = 'Lorem ipsum dolor sit amet, ...';
+
+let canvas3 = document.getElementById("example3-canvas");
+let options3 = {
+    textFillStyle: '#000000',
+    fontSize: 22,
+    lineHeight: 26,
+    width: 350,
+    startX: 26,
+    startY: 26,
+    bottomAligned: true,
+    useBackground: true
+};
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="example">
             <canvas id="example4-canvas" class="example-canvas" width="400" height="400"></canvas>
