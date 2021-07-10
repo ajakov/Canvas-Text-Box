@@ -163,13 +163,107 @@ canvasTextBox.draw(canvas4, text, options4);
             </div>
         </section>
         <section class="example">
-            <canvas id="example5-canvas" class="example-canvas" width="400" height="400"></canvas>
+            <h2>Example 5 - centered text on full width background</h2>
+            <div class="row">
+                <div class="column">
+                    <canvas id="example5-canvas" class="example-canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>
+                            This example demonstrates the use of, <b>textAlign</b> option
+                            with value set to <b>center</b>. Default value of this option is <b>left</b>
+                        </p>
+                        <pre><code class="language-javascript">
+let text = 'Lorem ipsum dolor sit amet, ...';
+
+let canvas5 = document.getElementById("example5-canvas");
+let options5 = {
+    textFillStyle: '#000000',
+    fontSize: 22,
+    lineHeight: 26,
+    width: 350,
+    startX: 26,
+    startY: 26,
+    bottomAligned: true,
+    useBackground: true,
+    fullWidthBackground: true,
+    textAlign: 'center'
+};
+canvasTextBox.draw(canvas5, text, options5);
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="example">
-            <canvas id="example6-canvas" class="example-canvas" width="400" height="400"></canvas>
+            <h2>Example 6 - centered text without full width background</h2>
+            <div class="row">
+                <div class="column">
+                    <canvas id="example6-canvas" class="example-canvas" width="400" height="400"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>
+                            Same as previous example, but without <b>fullWidthBackground</b>
+                        </p>
+                        <pre><code class="language-javascript">
+let text = 'Lorem ipsum dolor sit amet, ...';
+
+let canvas6 = document.getElementById("example6-canvas");
+let options6 = {
+    textFillStyle: '#000000',
+    fontSize: 22,
+    lineHeight: 26,
+    width: 350,
+    startX: 26,
+    startY: 26,
+    bottomAligned: true,
+    useBackground: true,
+    fullWidthBackground: false,
+    textAlign: 'center'
+};
+canvasTextBox.draw(canvas6, text, options6);
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="example">
-            <canvas id="example7-canvas" class="example-canvas" width="400" height="400" style="background-color: #808000;"></canvas>
+            <h2>Example 7 - meme generator</h2>
+            <div class="row">
+                <div class="column">
+                    <canvas id="example7-canvas" class="example-canvas" width="400" height="400" style="background-color: #808000;"></canvas>
+                </div>
+                <div class="column">
+                    <div class="example-description example1">
+                        <p>
+                            Font style and positioning in a use case that resembles a meme generator.
+                        </p>
+                        <pre><code class="language-javascript">
+let canvas7 = document.getElementById("example7-canvas");
+let options7 = {
+    fontFamily: 'Impact, Charcoal, sans-serif',
+    textFillStyle: '#FFFF00',
+    fontSize: 40,
+    fontWeight: 'bold',
+    lineHeight: 52,
+    width: 400,
+    startX: 0,
+    startY: 52,
+    bottomAligned: false,
+    useBackground: false,
+    textAlign: 'center'
+};
+let options71 = Object.assign({}, options7);
+options71.bottomAligned = true;
+options71.marginBottom = 20;
+canvasTextBox.draw(canvas7, 'Y U NOT USE THIS', options7);
+canvasTextBox.draw(canvas7, 'FOR MEME GENERATOR', options71);
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </body>
