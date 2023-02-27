@@ -63,3 +63,6 @@ You can set a background for your text or for a whole textbox.
 * `paddingRight: 20` used only to calculate spread of the background fill right of the text. Should be double of `paddingLeft` for "nice looking results"
 * `paddingTop: 20` used only to calculate spread of the background fill above the text 
 
+### Links
+
+* Project official page: https://aleksandarjakovljevic.com/canvas-text-box/
