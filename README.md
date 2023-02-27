@@ -1,9 +1,8 @@
 # Canvas Text Box
 
-Native Canvas API does not have a method to wrap text onto the next line when a desired maximum width is reached.
+Canvas Text Box is a JavaScript library that allows wrapping and measuring of the text on a canvas element. Text is wrapped inside the dimensions of the box. A background can be added to the text.
 
-Canvas Text Box is a JavaScript librabry that allows wrapping and measuring text on a canvas element.
-Text is wrapped inside the dimensions of the box. A background can be added to the text.
+Reason behind the existence of this library is that native Canvas API does not have a method to wrap text onto the next line when a desired maximum width is reached.
 
 ## Basic usage
 
