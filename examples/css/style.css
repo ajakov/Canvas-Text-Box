@@ -34,7 +34,7 @@ canvas.example-canvas {
 }
 
 #example7-canvas {
-    background-image: url(/examples/assets/hacktoberfest2.webp);
+    background-image: url(../assets/hacktoberfest2.webp);
     background-size: cover;
     color: white;
 }
