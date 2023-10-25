@@ -32,3 +32,9 @@ canvas.example-canvas {
     width: 100%;
     overflow-x: auto;
 }
+
+#example7-canvas {
+    background-image: url(../assets/hacktoberfest2.webp);
+    background-size: cover;
+    color: white;
+}
